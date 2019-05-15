@@ -1,13 +1,12 @@
 # php-ubi
 
-NO WORKING NEITHER UBI7 NOT UBI8.
-On ubi7 need to find how to start php with httpd both from scl -- httpd not activating php module.
-On ubi8 httpd cannot talk to fgci php
+Minimal "hello, world" container image based on Red Hat's Universal Base Image (UBI) and PHP with Apache HTTPd from Software Collection Library (SCL).
 
-Minimal "hello, world" container image based on Red Hat's Universal Base Image (UBI) and PHP.
-For more information about UBI, see: https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image
+For more information about UBI, see: https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image and https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index?lb_target=stage#using_red_hat_universal_base_images_standard_minimal_and_runtimes
 
-This is a long-running container that returns a "hello, world" HTML page.
+For more information about SCL, see: https://access.redhat.com/documentation/en-us/red_hat_software_collections/3/
+
+This is a long-running container that returns a "Hello, world!" HTML page. Not very dynamic, I know. ;-) Just make sure you see no '<?php' tags in the generated page.
 
 You need a Red Hat Developer's account to grab the service account user name and token to download the UBI base images. It is free. :-)
 You can also use the unauthenticated registry while it is still available.
@@ -23,7 +22,7 @@ $ sudo podman run --name hello -p 8080:8080 -d localhost/php-ubi
 $ curl localhost:8080
 <html>
 <body>
-<?= "Hello world" ?>
+Hello world!
 </body>
 </html>
 $ sudo podman stop hello
