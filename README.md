@@ -1,6 +1,6 @@
 # php-ubi
 
-Minimal "hello, world" container image based on Red Hat's Universal Base Image (UBI) and PHP with Apache HTTPd from Software Collection Library (SCL).
+Minimal "hello, world" container image based on Red Hat's Universal Base Image (UBI) and PHP with Apache HTTPd from the Software Collections Library (SCL).
 
 For more information about UBI, see: https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image and https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index?lb_target=stage#using_red_hat_universal_base_images_standard_minimal_and_runtimes
 
