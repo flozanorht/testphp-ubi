@@ -1,6 +1,11 @@
 # php-ubi
 
-Minimal "hello, world" container image based on Red Hat's Universal Base Image (UBI) for RHEL 7 and PHP with Apache HTTPd from the Software Collections Library (SCL).
+Minimal "hello, world" container image based on Red Hat's Universal Base Image (UBI) for a PHP application.
+
+The default Dockerfile uses the standard UBI image for RHEL 7 and PHP with Apache HTTPd from the Software Collections Library (SCL).
+
+There are also Dockerfile variants using UBI for RHEL 8 and the minimal UBI container images.
+The RHEL 8 variants take PHP and Apache HTTPd from AppStreams because there are no more SCLs for RHEL 8.
 
 For more information about UBI, see: https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image and https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index?lb_target=stage#using_red_hat_universal_base_images_standard_minimal_and_runtimes
 
