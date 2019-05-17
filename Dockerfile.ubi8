@@ -1,8 +1,9 @@
-FROM registry.redhat.io/ubi8/ubi-minimal
-#FROM registry.access.redhat.com/ubi8/ubi-minimal
+FROM registry.redhat.io/ubi8/ubi
+#FROM registry.access.redhat.com/ubi8/ubi
 
-RUN microdnf --nodocs -y install httpd php \
-  && microdnf clean all
+RUN yum --disableplugin=subscription-manager -y module enable php:7.2 \
+  && yum --disableplugin=subscription-manager -y install httpd php \
+  && yum --disableplugin=subscription-manager clean all
 
 ADD index.php /var/www/html
 
