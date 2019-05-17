@@ -67,7 +67,7 @@ $ oc new-app --name hello https://github.com/flozanorht/testphp-ubi.git
 $ oc logs -f bc/hello
 $ oc get pod
 $ oc expose svc hello
-$ curl hello-project.mycluster.example.com
+$ curl hello-myproj.mycluster.example.com
 ```
 
 These commands should work on both OpenShift 3.x and 4.x
